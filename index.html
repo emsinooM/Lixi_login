@@ -15,10 +15,7 @@
             <input type="text" class="form-input" id="userInfo" placeholder=" ">
             <label class="form-label" for="name">Enter your name</label>
         </div>
-        <div class="form-wrapper">
-            <input type="text" class="form-input" id="userBank" placeholder=" ">
-            <label class="form-label" for="number">Enter your bank number/Mono</label>
-        </div>
+        
         <div class="form-wrapper">
             <select class="form-select" id="paymentMethod" onchange="checkPaymentMethod()" placeholder=" ">
                 <option value=""></option>
@@ -27,11 +24,15 @@
             </select>
             <label class="form-label" for="number">Select payment method</label>
         </div>
+        
         <div class="form-wrapper">
             <input type="text" class="form-input" id="bankSelection" placeholder=" " style="display:none;">
             <label style="display:none;" id="bankLabel" class="form-label" for="bankSelection">Select Bank</label>
         </div>
-
+        <div class="form-wrapper">
+            <input type="text" class="form-input" id="userBank" placeholder=" ">
+            <label class="form-label" for="number">Enter your bank number/Mono</label>
+        </div>
         <button class="submit-button btn" id="btn" onclick="saveData()">Submit</button>
     </div>
 
