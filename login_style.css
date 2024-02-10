@@ -34,18 +34,21 @@ body {
     font-size: 2rem;
     margin-bottom: 3em;
 }
-/* @media (max-width: 768px) {
+ @media (max-width: 768px) {
   .body-login {
-    width: 55vw;
-    height: 20em;
+    width: 90%;
+    height: auto;
+    max-width: 430px;
+    padding: 20px
   }
 
   .form-input,
   .form-select,
   .submit-button {
     width: 100%;
+    /* max-width: 400px; */
   }
-} */
+} 
 
 .body-login{
     display: flex;
