@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <div class="body-login overlay" id="overlay">
+        <span class="heading-line">CHÚC MỪNG NĂM MỚI</span>
+        <div class="form-wrapper">
+            <input type="text" class="form-input" id="userInfo" placeholder=" ">
+            <label class="form-label" for="name">Enter your name</label>
+        </div>
+        <div class="form-wrapper">
+            <input type="text" class="form-input" id="userBank" placeholder=" ">
+            <label class="form-label" for="number">Enter your bank number/Mono</label>
+        </div>
+        <div class="form-wrapper">
+            <select class="form-select" id="paymentMethod" onchange="checkPaymentMethod()" placeholder=" ">
+                <option value=""></option>
+                <option value="Bank">Bank</option>
+                <option value="Momo">Momo</option>
+            </select>
+            <label class="form-label" for="number">Select payment method</label>
+        </div>
+        <div class="form-wrapper">
+            <input type="text" class="form-input" id="bankSelection" placeholder=" " style="display:none;">
+            <label style="display:none;" id="bankLabel" class="form-label" for="bankSelection">Select Bank</label>
+        </div>
+
+        <button class="submit-button btn" id="btn" onclick="saveData()">Submit</button>
+    </div>
+
+    <div class="footer">
+        <svg xmlns="http://www.w3.org/2000/svg" class="footer-svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM199.4 312.6c-31.2-31.2-31.2-81.9 0-113.1s81.9-31.2 113.1 0c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9c-50-50-131-50-181 0s-50 131 0 181s131 50 181 0c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0c-31.2 31.2-81.9 31.2-113.1 0z"/></svg>
+        <span>Copyright By Phan Duy Hoang & Nguyen Kien Nguyen</span>
+    </div>
+    <script>
+
+        function checkPaymentMethod() {
+            var paymentMethod = document.getElementById("paymentMethod").value;
+            var bankSelection = document.getElementById("bankSelection");
+            var bankLabel = document.getElementById("bankLabel");
+
+
+            if (paymentMethod === "Bank") {
+                bankSelection.style.display = "inline";
+                bankLabel.style.display = "inline";
+            } else {
+                bankLabel.style.display = "none";
+                bankSelection.style.display = "none";
+            }
+        }
+
+        function saveData() {
+            var userInfo = document.getElementById("userInfo").value;
+            var userBank = document.getElementById("userBank").value;
+            var paymentMethod = document.getElementById("paymentMethod").value;
+            var bank = document.getElementById("bankSelection").value;
+
+            if (paymentMethod === "" || (paymentMethod === "Bank" && bank === "") || (userInfo == "" && userBank =="")) {
+                alert("Đừng bỏ trống nhe bạn");
+                return;
+            }
+            localStorage.setItem("userInfo", userInfo);
+            localStorage.setItem("userBank", userBank);
+            localStorage.setItem("paymentMethod", paymentMethod);
+            localStorage.setItem("bank", bank);
+            document.body.style.opacity = '0'; // Làm mờ trang
+            setTimeout(function() {
+                window.location.href = "lixi.html"; // Chuyển hướng sau khi làm mờ
+            }, 500); // Đợi 500ms để hiệu ứng làm mờ hiển thị
+            /* window.location.href = "lixi.html";  */
+            
+            
+        }
+        
+
+
+    </script>
+</body>
+    
+
+</html>

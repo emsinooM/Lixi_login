@@ -1,0 +1,133 @@
+.btn:hover {
+  background-color: #4CAF50; /* Màu khi di chuột qua */
+  transform: scale(1.05); /* Phóng to một chút */
+}
+
+.btn:active {
+  background-color: #3e8e41; /* Màu khi nhấn */
+  transform: scale(0.95); /* Thu nhỏ một chút */
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FDDDE6;
+    font-family: 'Roboto', sans-serif;
+    transition: opacity 0.5s ease-out;
+    min-height: 100vh;
+}
+
+.footer {
+  margin-top: 12px; /* Push it to the bottom */
+}
+
+.form-wrapper{
+    position: relative;
+}
+
+.heading-line{
+    color: #ffb200;
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+.body-login{
+    display: flex;
+    background-color: #AA381E;
+    flex-direction: column;
+    height: 600px;
+    width: 500px;
+    border: solid 2px #AA381E;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.form-input ,.form-select, .submit-button{
+    margin-bottom: 20px;
+    height: 50px;
+    width: 400px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: none;
+}
+
+.form-input{
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    padding: 0 20px;
+    transition: 0.25s ease;
+}
+
+.form-label{
+    position: absolute;
+    top: 35%;
+    left: 21px;
+    transform: translateY(-50%);
+    color: #999;
+    user-select: none;
+    pointer-events: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+}
+
+.form-input:not(:placeholder-shown) + .form-label,
+.form-select:not(:placeholder-shown) + .form-label
+,.form-input:focus + .form-label
+,.form-select:focus + .form-label{
+    top: 0;
+    left: 11px;
+    padding: 0 10px;
+    display: inline-block;
+    background-color: #AA381E;
+    color: #ccc;
+}
+
+/* Placeholder-shown: là để trường hợp place holder trống thì khong nhảy lên và ngược lại. Phải để placeholder là space*/
+
+.form-select{
+    height: 50px;
+    width: calc(400px + 40px);
+    font-size: 1rem;
+    padding-left: 16px;
+    background-color: #AA381E;
+    color: #ccc;
+}
+
+.select-items{
+    background-color: red;
+}
+
+.submit-button{
+    width: calc(400px * 0.5);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #e27676;
+}
+
+.submit-button:hover{
+    background-color: #AA381E;
+    color: white;
+}
+
+.footer{
+    display: block;
+}
+
+.footer-svg{
+    width: 15px;
+    height: 15px;
+}
