@@ -37,17 +37,24 @@ body {
  @media (max-width: 900px) {
   .body-login {
     width: 90%;
-    height: auto;
-    max-width: 430px;
+    height: 90%;
+    max-width: 300px;
+    max-height: 500px;
     padding: 20px
   }
-
+  .heading-line{
+    font-size: 1.5rem;
+  }
+  .form-select{
+    width: calc(400px + 40px);
+  }
   .form-input,
   .form-select,
   .submit-button {
     width: 100%;
-    /* max-width: 400px; */
+    max-width: 250px;
   }
+  
 } 
 
 .body-login{
@@ -72,10 +79,11 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     background: none;
+    color: whitesmoke
 }
 
 .form-input{
-    height: 3.125em;
+    /* height: 3.125em; */
     border: 0.1em solid #ccc;
     border-radius: 0.25em;
     font-size: 1.2rem;
@@ -112,9 +120,9 @@ body {
 
 .form-select{
     height: 3.125em;
-    width: calc(25em + 2.4em);
+    width: calc(400px + 30px);
     font-size: 1rem;
-    padding-left: 16px;
+    padding: 0 1.2em;
     background-color: #AA381E;
     color: #ccc;
 }
