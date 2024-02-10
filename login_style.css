@@ -22,7 +22,7 @@ body {
 }
 
 .footer {
-  margin-top: 12px; /* Push it to the bottom */
+  margin-top: 1.2em; /* Push it to the bottom */
 }
 
 .form-wrapper{
@@ -32,27 +32,27 @@ body {
 .heading-line{
     color: #ffb200;
     font-size: 2rem;
-    margin-bottom: 50px;
+    margin-bottom: 3em;
 }
-@media (max-width: 768px) {
-    .body-login {
-      width: 90vw;
-      height: auto;
-    }
-  
-    .form-input,
-    .form-select,
-    .submit-button {
-      width: 100%;
-    }
+/* @media (max-width: 768px) {
+  .body-login {
+    width: 55vw;
+    height: 20em;
   }
-  
+
+  .form-input,
+  .form-select,
+  .submit-button {
+    width: 100%;
+  }
+} */
+
 .body-login{
     display: flex;
     background-color: #AA381E;
     flex-direction: column;
-    height: 600px;
-    width: 500px;
+    height: 40em;
+    width: 30em;
     border: solid 2px #AA381E;
     border-radius: 30px;
     justify-content: center;
@@ -62,9 +62,9 @@ body {
 
 
 .form-input ,.form-select, .submit-button{
-    margin-bottom: 20px;
-    height: 50px;
-    width: 400px;
+    margin-bottom: 1.2em;
+    height: 3.125em;
+    width: 20em;
     border-radius: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -72,18 +72,18 @@ body {
 }
 
 .form-input{
-    height: 50px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    height: 3.125em;
+    border: 0.1em solid #ccc;
+    border-radius: 0.25em;
     font-size: 1.2rem;
-    padding: 0 20px;
+    padding: 0 1.25em;
     transition: 0.25s ease;
 }
 
 .form-label{
     position: absolute;
     top: 35%;
-    left: 21px;
+    left: 1.3125em;
     transform: translateY(-50%);
     color: #999;
     user-select: none;
@@ -98,8 +98,8 @@ body {
 ,.form-input:focus + .form-label
 ,.form-select:focus + .form-label{
     top: 0;
-    left: 11px;
-    padding: 0 10px;
+    left: 0.6875em;
+    padding: 0 0.625em;
     display: inline-block;
     background-color: #AA381E;
     color: #ccc;
@@ -108,8 +108,8 @@ body {
 /* Placeholder-shown: là để trường hợp place holder trống thì khong nhảy lên và ngược lại. Phải để placeholder là space*/
 
 .form-select{
-    height: 50px;
-    width: calc(400px + 40px);
+    height: 3.125em;
+    width: calc(25em + 2.4em);
     font-size: 1rem;
     padding-left: 16px;
     background-color: #AA381E;
